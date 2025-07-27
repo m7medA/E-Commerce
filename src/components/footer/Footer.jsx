@@ -36,7 +36,7 @@ function Footer() {
 
           <div className="flex justify-center md:justify-end">
             <img
-              src="/src/assets/images/footerimg.png"
+              src="/public/images/footerimg.png"
               alt="coupon"
               className="max-h-64 object-contain"
             />
@@ -254,12 +254,12 @@ function Footer() {
           </p>
           <div className="flex gap-2">
             <img
-              src="/src/assets/images/googlePlayImg.png"
+              src="/public/images/googlePlayImg.png"
               alt="googlePlay"
               className="h-8"
             />
             <img
-              src="/src/assets/images/appleStoreImg.png"
+              src="/public/images/appleStoreImg.png"
               alt="appleStore"
               className="h-8"
             />
@@ -283,7 +283,7 @@ function Footer() {
           <p>Terms and Conditions</p>
           <p>Cookie</p>
 
-          <img src="/src/assets/images/barImg.png" alt="" className="h-4" />
+          <img src="/public/images/barImg.png" alt="" className="h-4" />
         </div>
       </div>
     </section>

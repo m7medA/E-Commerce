@@ -54,7 +54,7 @@ function Header() {
 
         <div className="flex items-center gap-2 text-xs text-center md:text-left">
           <img
-            src="/src/assets/images/Vector.svg"
+            src="/public/images/Vector.svg"
             alt="secure"
             className="w-4 h-4"
           />

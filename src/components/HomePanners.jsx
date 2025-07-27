@@ -8,7 +8,7 @@ function HomePanners() {
       <div className="relative">
         <div className="sm:aspect-[4/2.1] aspect-[4/2.3] w-full md:max-w-[850px] md:h-[490px] overflow-hidden bg-gray-100 rounded-md">
           <img
-            src={`/src/assets/images/imageHome_${activeSlide}.png`}
+            src={`/public/images/imageHome_${activeSlide}.png`}
             alt=""
             className=" w-full h-full object-cover"
           />

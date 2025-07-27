@@ -28,7 +28,7 @@
 }
 
 .aboutUsImage {
-  background-image: url("/src//assets/images/aboutUsImage.jpg");
+  background-image: url("/public/images/aboutUsImage.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

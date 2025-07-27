@@ -39,9 +39,9 @@ function About() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
-          <div className="w-full md:w-[40%] bg-red-500 h-auto">
+          <div className="w-full md:w-[40%] h-auto">
             <img
-              src="/src/assets/images/CEO.png"
+              src="/public/images/CEO.png"
               className="w-full h-auto"
               alt="CEO"
             />
