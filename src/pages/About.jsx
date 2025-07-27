@@ -40,11 +40,7 @@ function About() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
           <div className="w-full md:w-[40%] h-auto">
-            <img
-              src="/public/images/CEO.png"
-              className="w-full h-auto"
-              alt="CEO"
-            />
+            <img src="/images/CEO.png" className="w-full h-auto" alt="CEO" />
           </div>
 
           <div className="w-full md:w-[56%] flex flex-col gap-4 sm:gap-6 md:gap-8">

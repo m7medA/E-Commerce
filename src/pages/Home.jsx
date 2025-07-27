@@ -31,7 +31,7 @@ function HomePage() {
         </div>
 
         <img
-          src="/public/images/midImage.png"
+          src="/images/midImage.png"
           alt="midImage.png"
           className="rounded-md w-48 sm:w-64 ml-[calc(100%-192px)] sm:ml-0"
         />
