@@ -1,18 +1,24 @@
 import { useLoaderData } from "react-router-dom";
 import { fetchCategories } from "../utils/fetches";
+import CtegoryNavLink from "../components/CtegoryNavLink";
 
 function CategoriesPage() {
   const categories = useLoaderData();
 
   return (
-    <div className="w-[90%] mx-auto p-6">
-      <h1>categories</h1>
-      <ul>
+    <section className="layout py-6 text-sm sm:text-base">
+      <ul className="flex items-center justify-items-start flex-wrap">
         {categories.map((category) => (
-          <li key={category.name}>{category.name}</li>
+          <CtegoryNavLink
+            key={category.slug}
+            to={`/categoryPage/${category.slug.trim().toLowerCase()}`}
+            type="category"
+          >
+            {category.name}
+          </CtegoryNavLink>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
 

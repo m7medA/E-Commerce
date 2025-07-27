@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { fetchBySearchQuery } from "../utils/fetches";
-import ProductContianer from "../components/ProductContianer";
+import ProductContianer from "../featuers/products/ProductContianer";
 
 function SearchResults() {
   const { products } = useLoaderData();

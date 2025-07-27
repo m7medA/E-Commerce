@@ -5,30 +5,30 @@ function SearchBar() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
-  function handelSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
 
-    if (!query) return;
-    navigate(`/searchresults/${query}`);
+    if (!query.trim()) return;
+    navigate(`/searchresults/${query.trim()}`);
     setQuery("");
   }
 
   return (
     <form
-      onSubmit={handelSubmit}
-      className="flex items-center justify-between w-[64%] bg-[#F3F4F7] px-4 py-3 rounded-lg"
+      onSubmit={handleSubmit}
+      className="flex items-center bg-[#F3F4F7] rounded-lg px-4 py-3 my-2 md:my-0 w-full md:w-[60%] order-last md:order-1 transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm hover:shadow-lg"
     >
       <input
         type="text"
         value={query}
-        placeholder="Search for Products, fruit, meat, eggs. etc... "
-        className="w-[60%] font-semibold focus:outline-none text-[#3E445A]"
         onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search for products, fruits, meat, eggs..."
+        className="flex-1 bg-transparent focus:outline-none font-medium text-sm md:text-base text-color placeholder:text-[#A0A3AD]"
       />
 
-      <span>
-        <i className="fa-solid fa-magnifying-glass text-2xl text-[#989CA8]"></i>
-      </span>
+      <button type="submit">
+        <i className="fa-solid fa-magnifying-glass text-xl text-[#989CA8] hover:text-main transition" />
+      </button>
     </form>
   );
 }

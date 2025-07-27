@@ -4,49 +4,66 @@ import CategoriesBar from "./CategoriesBar";
 
 function Header() {
   return (
-    <header className="container mx-auto">
-      <p className="bg-[#35AFA0] text-white py-2 text-center text-xs">
+    <header className="w-full pb-2">
+      <p className="bg-main text-white py-1 text-center text-xs">
         Due to current circumstances, there may be slight delays in order
         processing
       </p>
 
-      <div className="w-[90%] mx-auto flex items-center justify-between px-6 py-3 text-[#3E445A] text-sm font-semibold border-b-2 border-[#EDEEF5]">
-        <div className="flex items-center justify-between w-[auto] ">
+      <div className="w-[90%] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:px-6 py-2 text-color text-sm font-semibold border-b-2 border-[#EDEEF5]">
+        <div className="flex items-center justify-center w-full md:w-auto md:border-none border-b-2 border-[#EDEEF5]">
           <NavLink
-            to="/about"
-            className={({ isActive }) => `
-                px-2 py-1 transition-all duration-300 ease-in-out transform
-              ${
+            to="/cartpage"
+            className={({ isActive }) =>
+              `px-2 py-1 transition-all duration-300 ease-in-out transform pl-2 hover:-translate-y-1  ${
                 isActive
-                  ? " border-b-3 border-[#35afa0] font-bold rounded-sm -translate-y-1 "
+                  ? "border-b-2 border-main font-bold rounded-sm -translate-y-1"
                   : ""
-              }`}
+              }`
+            }
           >
-            About US
+            Cart
           </NavLink>
+          <div className="border-8 border-[#EDEEF5] md:border-none rounded-full"></div>
           <NavLink
             to="/wishlist"
-            className={({ isActive }) => `
-                px-2 py-1 transition-all duration-300 ease-in-out transform
-              ${
+            className={({ isActive }) =>
+              `px-2 py-1 transition-all duration-300 ease-in-out transform pr-2 hover:-translate-y-1 ${
                 isActive
-                  ? " border-b-3 border-[#35afa0] font-bold rounded-sm -translate-y-1 "
+                  ? "border-b-2 border-main font-bold rounded-sm -translate-y-1"
                   : ""
-              }`}
+              }`
+            }
           >
             Wishlist
           </NavLink>
+          <div className="border-8 border-[#EDEEF5] md:border-none rounded-full"></div>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `px-2 py-1 transition-all duration-300 ease-in-out transform pr-2 hover:-translate-y-1 md:hidden ${
+                isActive
+                  ? "border-b-2 border-main font-bold rounded-sm -translate-y-1"
+                  : ""
+              }`
+            }
+          >
+            About Us
+          </NavLink>
         </div>
 
-        <div className="flex">
-          <span className="mr-2">
-            <img src="/src/assets/images/Vector.svg" alt="" />
-          </span>
+        <div className="flex items-center gap-2 text-xs text-center md:text-left">
+          <img
+            src="/src/assets/images/Vector.svg"
+            alt="secure"
+            className="w-4 h-4"
+          />
           <p>100% Secure delivery without contacting the courier</p>
         </div>
 
-        <p className="text-xs">
-          Need help? Call Us: <span className="text-[#35AFA0]">+ 0020 500</span>
+        <p className="text-xs whitespace-nowrap">
+          Need help? Call Us:{" "}
+          <span className="text-main font-semibold">+20 1280650152</span>
         </p>
       </div>
 

@@ -8,6 +8,13 @@ import SearchResults, { loader as queryLoader } from "./pages/SearchResults";
 import CategoriesPage, {
   loader as categoriesLoader,
 } from "./pages/CategoriesPage";
+import CategoryPage, { loader as categryLoader } from "./pages/CategoryPage";
+import AllProductsPage from "./pages/AllProductsPage";
+import CartPage from "./featuers/cart/CartPage";
+import ProductPageDetails, {
+  loader as idLoader,
+} from "./pages/ProductPageDetails";
+import LoginPage from "./pages/LoginPage";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +26,10 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/loginpage",
+        element: <LoginPage />,
+      },
+      {
         path: "/searchresults/:query",
         element: <SearchResults />,
         loader: queryLoader,
@@ -27,6 +38,24 @@ const router = createBrowserRouter([
         path: "/categoriespage",
         element: <CategoriesPage />,
         loader: categoriesLoader,
+      },
+      {
+        path: "/categoryPage/:category",
+        element: <CategoryPage />,
+        loader: categryLoader,
+      },
+      {
+        path: "/allproductspage",
+        element: <AllProductsPage />,
+      },
+      {
+        path: "/productpagedetials/:id",
+        element: <ProductPageDetails />,
+        loader: idLoader,
+      },
+      {
+        path: "/cartpage",
+        element: <CartPage />,
       },
       {
         path: "/wishlist",

@@ -1,75 +1,63 @@
 import { NavLink } from "react-router-dom";
-import ProductItem from "../components/ProductItemHome";
-import { useSelector } from "react-redux";
-
-const fakeProducts = [
-  {
-    id: 1,
-    title: "Nike Air Max",
-    price: 120.99,
-    discountPercentage: 0,
-    stock: 0,
-    images:
-      "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp",
-    rating: 5.0,
-  },
-  {
-    id: 2,
-    title: "Adidas Ultraboost",
-    price: 140.5,
-    discountPercentage: 10.48,
-    stock: 99,
-    images:
-      "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp",
-    rating: 5.0,
-  },
-  {
-    id: 3,
-    title: "Puma RS-X",
-    price: 110,
-    discountPercentage: 10.48,
-    stock: 99,
-    images:
-      "https://cdn.dummyjson.com/product-images/beauty/powder-canister/1.webp",
-    rating: 5.0,
-  },
-  {
-    id: 4,
-    title: "New Balance 574",
-    price: 95.75,
-    discountPercentage: 10.48,
-    stock: 99,
-    images:
-      "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp",
-    rating: 5.0,
-  },
-  {
-    id: 5,
-    title: "Converse Chuck Taylor",
-    price: 70.25,
-    discountPercentage: 10.48,
-    stock: 99,
-    images:
-      "https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/1.webp",
-    rating: 5.0,
-  },
-];
+import HomePanners from "../components/HomePanners";
+import DisPlayProducts from "../featuers/products/DisplayProducts";
 
 function HomePage() {
-  const wishlistIds = useSelector((store) => store.wishlist.wishlistIds);
-
   return (
-    <div>
-      <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {fakeProducts.map((product) => (
-          <ProductItem
-            product={product}
-            key={product.id}
-            loved={wishlistIds.includes(product.id)}
-          />
-        ))}
-      </ul>
-    </div>
+    <section>
+      <HomePanners />
+
+      <div className="layout py-6">
+        <div className="pb-6">
+          <h2 className="uppercase text-[#202435] font-semibold text-3xl py-2">
+            best sellers
+          </h2>
+          <p className="text-[#9B9BB4]">
+            Do not miss the current offers until the end of March.
+          </p>
+        </div>
+
+        <DisPlayProducts pagination="top" skipValue={40} />
+      </div>
+
+      <div className="layout my-6 flex items-center justify-between bg-[#F8EFEA] rounded-md relative sm:relative ">
+        <div className="px-3 sm:px-6 flex flex-col gap-2 sm:gap-3 text-left sm:text-center md:text-left absolute sm:relative">
+          <p className="font-light text-[#9B9BB4] text-sm sm:text-lg">
+            Always Taking Care
+          </p>
+          <p className="font-bold text-[#71778E] text-base sm:text-xl">
+            In store or online your health & safety is our top priority.
+          </p>
+        </div>
+
+        <img
+          src="/src/assets/images/midImage.png"
+          alt="midImage.png"
+          className="rounded-md w-48 sm:w-64 ml-[calc(100%-192px)] sm:ml-0"
+        />
+      </div>
+
+      <div className="layout py-6">
+        <div className="pb-6 flex items-center justify-between">
+          <div>
+            <h2 className="uppercase text-[#202435] font-semibold text-2xl sm:text-3xl py-1 sm:py-2 text-left">
+              All products
+            </h2>
+            <p className="text-[#9B9BB4] text-sm sm:text-base text-left">
+              All products with updated stocks.
+            </p>
+          </div>
+
+          <NavLink
+            to="/allproductspage"
+            className="text-[#D9D9E9] text-sm sm:text-base border-1 border-[#D9D9E9] px-3 py-2 rounded-xl font-semibold hover:bg-[#D9D9E9] hover:text-white transition-all duration-300 flex items-center gap-1 sm:gap-2"
+          >
+            View more <span className="text-2xl hidden sm:block">→</span>
+          </NavLink>
+        </div>
+        <DisPlayProducts limit={10} withSkip={0} />
+      </div>
+    </section>
   );
 }
 

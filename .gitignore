@@ -1,26 +1,24 @@
-# ✅ Node modules
+
 node_modules/
 
-# ✅ build output (لو استخدمت build)
-dist/
 
-# ✅ البيئة
+
 .env
 .env.*.local
 
-# ✅ Logs
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# ✅ نظام التشغيل
+
 .DS_Store
 Thumbs.db
 
-# ✅ Vite cache
+
 .vite/
 
-# ✅ IDEs & Editors
+
 .vscode/
 .idea/
 *.suo
@@ -28,6 +26,6 @@ Thumbs.db
 *.njsproj
 *.sln
 
-# ✅ Tailwind config (لو شلته خلاص)
+
 tailwind.config.js
 postcss.config.js

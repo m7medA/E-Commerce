@@ -1,14 +1,16 @@
-function Button({ children, type = "add", buttonFunc }) {
-  const base =
-    "text-white lg:px-5 lg:py-2 px-4 py-2 rounded-full text-lg hover:cursor-pointer  transition-all duration-300";
-
+function Button({
+  children,
+  type = "add",
+  buttonFunc,
+  base = "text-white lg:px-3 lg:py-1 px-3 py-1 rounded-lg text-lg hover:cursor-pointer  transition-all duration-300",
+}) {
   const style =
     type === "delete"
       ? base + " bg-[#D51243] hover:bg-[#a50c32]"
-      : base + " bg-[#00B853] hover:bg-[#009944]";
+      : base + " bg-main hover:bg-[#038E42]";
 
   return (
-    <button className={style} onClick={buttonFunc}>
+    <button className={style} onClick={(e) => buttonFunc(e)}>
       {children}
     </button>
   );
