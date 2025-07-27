@@ -53,11 +53,7 @@ function Header() {
         </div>
 
         <div className="flex items-center gap-2 text-xs text-center md:text-left">
-          <img
-            src="/public/images/Vector.svg"
-            alt="secure"
-            className="w-4 h-4"
-          />
+          <img src="/images/Vector.svg" alt="secure" className="w-4 h-4" />
           <p>100% Secure delivery without contacting the courier</p>
         </div>
 
