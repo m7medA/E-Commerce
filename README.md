@@ -105,7 +105,3 @@ src/
 ## Author
 
 - **M7MED AYMAN**
-
-## License
-
-This project is
