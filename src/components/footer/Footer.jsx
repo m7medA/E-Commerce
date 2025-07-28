@@ -16,7 +16,7 @@ function Footer() {
               coupons.
             </p>
 
-            <form className="bg-white rounded-md p-1 flex items-center gap-2 max-w-md shadow-md">
+            <form className="bg-white rounded-md p-1 flex items-center gap-2 max-w-md shadow-md text-sm">
               <span className="text-gray-400 px-2">
                 <i className="fa-regular fa-envelope"></i>
               </span>
@@ -27,7 +27,7 @@ function Footer() {
               />
               <button
                 type="submit"
-                className="bg-[#35afa0] hover:bg-[#2b998b] text-white text-sm font-medium px-4 py-2 rounded-md border border-white transition cursor-pointer"
+                className="bg-[#35afa0] hover:bg-[#2b998b] text-white text-sm font-medium px-2 py-1 sm:px-4 sm:py-2 rounded-md border border-white transition cursor-pointer"
               >
                 Subscribe
               </button>
@@ -236,15 +236,7 @@ function Footer() {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-300 py-6 text-sm max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-4">
-        <div className="flex items-center gap-4">
-          <i className="fa-solid fa-phone-volume text-lg text-gray-500"></i>
-          <div>
-            <p className="font-bold">+20 1280650152</p>
-            <p className="text-xs text-gray-500">Working 8:00 - 22:00</p>
-          </div>
-        </div>
-
+      <div className="border-t border-gray-300 py-6 text-sm">
         <div className="flex flex-col items-center md:items-center gap-2">
           <p className="font-medium text-center">
             Download App on Mobile :{" "}
@@ -264,15 +256,6 @@ function Footer() {
               className="h-8"
             />
           </div>
-        </div>
-
-        <div className="flex gap-4 justify-center md:justify-end">
-          <a
-            href="https://github.com"
-            className="text-gray-800 hover:text-white hover:bg-[#333] rounded-full p-2 transition-all duration-300 hover:rotate-6"
-          >
-            <i className="fab fa-github text-xl" />
-          </a>
         </div>
       </div>
 

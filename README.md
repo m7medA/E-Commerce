@@ -8,6 +8,12 @@ This project was developed as part of my internship at **Web Masters**. It is a 
 
 ---
 
+## Live Demo
+
+[Basket 🛒](https://basket-e-commerce-m7meda.netlify.app/)
+
+---
+
 ## Technologies Used
 
 - **React**: For building user interfaces and managing component state.
